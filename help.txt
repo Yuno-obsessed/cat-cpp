@@ -1,0 +1,16 @@
+Usage: cat [OPTION]... [FILE]...
+Concatenate FILE(s) to standard output.
+
+With no FILE, or when FILE is -, read standard input.
+
+  -A,            equivalent to -nET
+  -b,            number nonempty output lines, overrides -n
+  -E,            display $ at end of each line
+  -n,            number all output lines
+  -T,            display TAB characters as ^I
+      --help     display this help and exit
+      --version  output version information and exit
+
+Examples:
+  cat f - g  Output f's contents, then standard input, then g's contents.
+  cat        Copy standard input to standard output.
