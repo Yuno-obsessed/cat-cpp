@@ -7,27 +7,9 @@
 #include<vector>
 
 // function to figure out how many spaces should be on line with -n and -b arguments
-std::string spacesCount(int digitsInNumber) {
-	std::string spaces{};
-	if (digitsInNumber < 10) {
-		spaces = "     ";
-	}
-	else if (digitsInNumber >= 10 && digitsInNumber < 100) {
-		spaces = "    ";
-	}
-	else if (digitsInNumber >= 100 && digitsInNumber < 1000) {
-		spaces = "   ";
-	}
-	else if (digitsInNumber >= 1000 && digitsInNumber < 10000) {
-		spaces = "  ";
-	}
-	else if (digitsInNumber >= 10000 && digitsInNumber < 100000) {
-		spaces = " ";
-	}
-	else {
-		spaces = "";
-	}
-	return spaces;
+std::string spacesCount(int digitsInNumber, int count = 6) {
+	for (; digitsInNumber > 0; digitsInNumber /= 10, --count);
+	return std::string(count, ' ');
 }
 
 // function to open,read and do operations corresponding to args on file
